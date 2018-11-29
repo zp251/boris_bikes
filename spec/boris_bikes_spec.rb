@@ -6,8 +6,9 @@ describe DockingStation do
   end
 
   it "gets working bike" do
-    bike = subject.release_bike
-    expect(bike).to be_working
+#    bike = subject.release_bike
+#    expect(bike).to be_working
+    expect { subject.release_bike }.to raise_error("this is the error you dont have a bike get outtta hereeee")
   end
 
   it 'docks something' do
@@ -19,7 +20,8 @@ describe DockingStation do
     bike = Bike.new
     subject.dock(bike)
     expect(subject.bike).to eq bike
-  end 
+
+  end
 
 
 end

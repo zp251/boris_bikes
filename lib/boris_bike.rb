@@ -2,7 +2,7 @@ class DockingStation
   attr_reader :bike
 
   def release_bike
-    Bike.new
+    raise RuntimeError.new("this is the error you dont have a bike get outtta hereeee")
   end
 
   def dock(bike)
